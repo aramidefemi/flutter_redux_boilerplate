@@ -11,7 +11,10 @@ import 'package:flutter_redux_boilerplate/store/store.dart';
 import 'package:flutter_redux_boilerplate/middleware/middleware.dart';
 import 'package:flutter_redux_boilerplate/models/app_state.dart';
 
-void main() => runApp(new ReduxApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(new ReduxApp());
+}
 
 class ReduxApp extends StatelessWidget {
     final store = createStore();
